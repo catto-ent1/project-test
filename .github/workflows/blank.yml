@@ -1,0 +1,16 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+    
+jobs:
+  build:
+    runs-on: windows-2019
+
+    steps:
+      - run: Get-Command msbuild
+        shell: pwsh
+      - run: Get-Command nonexistentcommand
+        shell: pwsh
+       
