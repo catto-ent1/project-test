@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-dotnet@v2
         with:
           dotnet-version: | 
-            5.0.x
+            6.0.x
       #- run: Get-VisualStudioProduct
       #  shell: pwsh
       #- run: Get-VisualStudioComponents
@@ -22,3 +22,7 @@ jobs:
         shell: pwsh
       - run: choco install visualstudio2019-workload-webbuildtools
       - run: dotnet workload list
+      - run: Get-VisualStudioProduct
+        shell: pwsh
+      - run: Get-VisualStudioComponents
+        shell: pwsh
