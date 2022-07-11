@@ -9,9 +9,7 @@ jobs:
     runs-on: windows-2019
 
     steps:
-      - uses: actions/setup-dotnet@v2
-        with:
-          dotnet-version: '3.1.x'
+      - uses: microsoft/setup-msbuild@v1.1
       - run: Get-Command msbuild
         shell: pwsh
       - run: Get-Command nonexistentcommand
