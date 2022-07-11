@@ -10,8 +10,15 @@ jobs:
 
     steps:
       - uses: microsoft/setup-msbuild@v1.1
+      - run: Get-VisualStudioProduct
+        shell: pwsh
+      - run: Get-VisualStudioComponents
+        shell: pwsh
       - run: Get-Command msbuild
         shell: pwsh
-      - run: Get-Command nonexistentcommand
+      - run: choco install visualstudio2019-workload-webbuildtools
+      - run: Get-VisualStudioProduct
+        shell: pwsh
+      - run: Get-VisualStudioComponents
         shell: pwsh
        
