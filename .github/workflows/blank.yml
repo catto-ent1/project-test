@@ -23,5 +23,5 @@ jobs:
       - run: choco install visualstudio2019-workload-webbuildtools
       - run: dotnet workload list
       - run: |
-          dir /S "C:\Program Files\dotnet\sdk\6.0.301\Microsoft"
-          dir /S "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools"
+          dir -S "C:\Program Files\dotnet\sdk\6.0.301\Microsoft"
+          dir -S "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools"
